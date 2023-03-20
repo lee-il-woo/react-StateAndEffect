@@ -5,6 +5,7 @@ useEffect(()=>{
     console.log('Unmount.js 마운트됬다')
     return ()=>{
         console.log('Unmount.js 언마운트됬다ㅜㅜ')
+        
     }
 },[])
     return(

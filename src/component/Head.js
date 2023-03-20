@@ -1,7 +1,11 @@
-function Head(){
+function Head(props){
+    
+
+
+
     return(
         <>
-        <div>Head</div>
+        <div>{props}</div>
         </>
     )
 }

@@ -25,41 +25,46 @@ function App() {
   }
 
 /**유즈이펙트 29-43*/
-  // const [isShow,setIsShow] = useState(true)
-  // const handleShow = ()=>{
-  //   if(isShow) setIsShow(false)
-  //   if(!isShow) setIsShow(true)
-  // }
+  const [isShow,setIsShow] = useState(true)
+  const handleShow = ()=>{
+    if(isShow) setIsShow(false)
+    if(!isShow) setIsShow(true)
+  }
 
   // deps에 data 넣어보기
-  // useEffect(()=>{
-  //   console.log('유즈이펙트 실행됨 ',data)
+  useEffect(()=>{
+    console.log('유즈이펙트 실행됨 ',data)
 
-  //   return ()=>{
-  //     console.log('클린업 실행됨 ',data)
+    return ()=>{
+      console.log('클린업 실행됨 ',data)
       
-  //   }
-  // },[])
+      
+    }
+  },[data])
+
+
+  const [isCount,setIsCount] = useState(true)
 
   return (
     <>
+    <div>Head</div>
     <Head></Head>
     <Main></Main>
     <Footer></Footer>
-
+    <Head></Head>
     {/* useState설명에서 사용 */}
-    {/* <h2>{stateCount}, {letCount}</h2>
+    <h2>{stateCount}, {letCount}</h2>
     <button onClick={increase}>+1</button>
-    <button onClick={decrease}>-1</button> */}
-
+    <button onClick={decrease}>-1</button>
+    
     {/* useEffect 설명에서 사용 */}
-    {/* <h2>{data}</h2>
+    <h2>{data}</h2>
     <button onClick={dataUp}>data+hello</button>
 
     {isShow && <Unmount></Unmount>}
-    <button onClick={handleShow}>look Unmount</button> */}
+    <button onClick={handleShow}>look Unmount</button>
 
-    {/* <NextWeek/> */}
+    <NextWeek/>
     </>
 
   );
